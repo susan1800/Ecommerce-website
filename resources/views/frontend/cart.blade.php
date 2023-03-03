@@ -223,19 +223,19 @@ border-bottom-right-radius: 16px;
                 @csrf
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label " style="float:left">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" value="{{old('name')}}">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" value="{{old('name')}}" required>
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label" style="float:left">Email:</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Your Email" value="{{old('email')}}">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" value="{{old('email')}}" required>
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label" style="float:left">Mobile Number:</label>
-                <input type="number" class="form-control" id="phone" name="phone" placeholder="Your Mobile number" value="{{old('phone')}}">
+                <input type="number" class="form-control" id="phone" name="phone" placeholder="Your Mobile number" value="{{old('phone')}}" required>
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label" style="float:left">Delivery Address:</label>
-                <input type="text" class="form-control" id="address" name="address" placeholder="Eg:(lalitpur-14 nakhiport micro station)" value="{{old('address')}}">
+                <input type="text" class="form-control" id="address" name="address" placeholder="Eg:(lalitpur-14 nakhiport micro station)" value="{{old('address')}}" required>
               </div>
 
 
