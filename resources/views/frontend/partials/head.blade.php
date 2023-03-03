@@ -2,10 +2,9 @@
 <!DOCTYPE html>
 <html lang="zxx">
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-    <title>Baggage Ecommerce Category Bootstrap Responsive Web Template | Home :: W3layouts</title>
-    <!-- Meta tag Keywords -->
+    <title>Kaicho Group</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
     <meta name="keywords" content="Baggage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -18,7 +17,10 @@
             window.scrollTo(0, 1);
         }
     </script>
-    <!-- //Meta tag Keywords -->
+
+
+
+<link rel="icon" type="image/png" href="{{asset('images/icon.png')}}">
     <!-- Custom-Files -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <!-- Bootstrap-Core-CSS -->
