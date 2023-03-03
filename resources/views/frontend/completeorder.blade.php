@@ -25,6 +25,10 @@
                 <th style="padding:10px;">Total price</th>
             </tr>
             @php $i=1; @endphp
+            {{$order}}
+            @php
+                exit();
+            @endphp
             @foreach($order->orderDetails as $product)
             <tr>
                 <th style="padding:10px;">{{$i}}</th>

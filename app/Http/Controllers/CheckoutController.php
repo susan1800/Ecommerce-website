@@ -181,7 +181,7 @@ class CheckoutController extends Controller
         session()->forget('kaichocartemail');
         session()->forget('kaichocartphone');
         session()->forget('kaichocartaddress');
-        session()->put('uaquesorderid', $order->id);
+        session()->put('kaichoorderid', $order->id);
 
 
         // return view('frontend.completeorder');
@@ -196,7 +196,7 @@ class CheckoutController extends Controller
 
     public function completeorder(){
 
-        $order_id = session()->get('uaquesorderid');
+        $order_id = session()->get('kaichoorderid');
 
         $order = Order::find($order_id);
 
