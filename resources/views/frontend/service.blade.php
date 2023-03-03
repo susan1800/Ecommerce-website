@@ -122,7 +122,7 @@ border-bottom-right-radius: .3rem;
                   </div>
                   <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                     <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                      <h4 class="mb-4">Send Your design to us</h4>
+                      <h4 class="mb-4">Send your design to us</h4>
                       <p class="small" style="color:white">We are offering you range of services to create and print your 3D Model .<br>
                         You can upload your stl file , we will connect to you and assist you further to get your imagination become reality .</p>
                     </div>
