@@ -6,7 +6,7 @@
     <section class="content-header">
         <h1>
             Dashboard
-            <small>Aayuva International</small>
+
         </h1>
         {{-- <ol class="breadcrumb">
             <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
