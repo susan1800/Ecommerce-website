@@ -104,7 +104,7 @@ border-bottom-right-radius: .3rem;
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="form2Example22" style="float:left">Your Design</label>
-                          <input type="file" id="design" name="design" placeholder="Your Number" class="form-control" />
+                          <input type="file" id="design" name="design" placeholder="Your Number" class="form-control"  accept=".stl"/>
                           @error('design')
                           <p class="error">{{ $message }}</p>
                       @enderror

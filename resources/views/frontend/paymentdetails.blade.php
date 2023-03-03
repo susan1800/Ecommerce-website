@@ -191,7 +191,7 @@
                                     </div>
                                     <form action="{{route('checkout.qrscan')}}" method="post" enctype='multipart/form-data'>
                                         @csrf
-                                    <input type="file" name="image" required>
+                                    <input type="file" name="image" accept="image/png, image/jpeg, image/jpg" required>
 
                                         <br>
                                         <input type="submit" class="btn btn-primary" value="Submit Your Order" >
