@@ -12,13 +12,13 @@
 
   .gradient-custom-2 {
 /* fallback for old browsers */
-background: #fccb90;
+background: #0bc2cf;
 
 /* Chrome 10-25, Safari 5.1-6 */
-background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+background: -webkit-linear-gradient(to right, #2ce7f5, #0cdef5 #05f57d, #0cdef5);
 
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+background: linear-gradient(to right, #2ce7f5, #0cdef5 #05f57d, #0cdef5);
 }
 
 @media (min-width: 768px) {
