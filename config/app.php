@@ -52,9 +52,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost/kaicha/public'),
+    'url' => env('APP_URL', env('MAIN_URL').'/public'),
 
-    'asset_url' => env('ASSET_URL', 'http://localhost/kaicha/public'),
+    'asset_url' => env('ASSET_URL', env('MAIN_URL').'/public'),
 
     /*
     |--------------------------------------------------------------------------
