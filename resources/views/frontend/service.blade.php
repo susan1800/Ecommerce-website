@@ -123,8 +123,8 @@ border-bottom-right-radius: .3rem;
                   <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                     <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                       <h4 class="mb-4">Send Your design to us</h4>
-                      <p class="small" style="color:white">offering a 3D printing service where customers can send in their designs and have them printed.</p>
-                      <p class="small" style="color:white">Customers can take advantage of this service by creating their own unique 3D designs and having them printed without the need to own a 3D printer themselves.</p>
+                      <p class="small" style="color:white">We are offering you range of services to create and print your 3D Model .<br>
+                        You can upload your stl file , we will connect to you and assist you further to get your imagination become reality .</p>
                     </div>
                   </div>
                 </div>

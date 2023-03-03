@@ -29,8 +29,8 @@
 
                 </div>
                 <div class="col-md-6 ab-content text-center p-lg-5 p-3 my-lg-5">
-                    <h4>Send your Design</h4>
-                    <p>Customers can take advantage of this service by creating their own unique 3D designs and having them printed without the need to own a 3D printer themselves.</p>
+                    <h4>CUSTOMISE YOUR DESIGN</h4>
+                    <p>Give us your own design, we can get them printed.</p>
                     <a href="{{route('services')}}" class="btn shop mt-3">Upload your Design</a>
 
                 </div>

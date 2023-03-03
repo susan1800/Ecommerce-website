@@ -23,8 +23,15 @@ class ServiceController extends BaseController
             'email'=>'required',
             'phone'=>'required|digits:10',
             'design'=>'required',
-         ]);
+        ], [
+            'name.required' => 'Please fill your name.',
+            'email.required'=>'Please fill your email address',
+            'email.email'=>'Please fill the valid email address !',
+            'phone.required' => 'Please fill the your mobile number !',
+            'phone.digits' => 'Phone number must contain 10 digits !',
+            'design.required'=>'Please select your design !',
 
+        ]);
 
          try{
 
