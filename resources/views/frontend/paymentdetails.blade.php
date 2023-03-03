@@ -76,11 +76,11 @@
 }
 
 .cashondelivery{
-    background-image: url("images/cashondelivery.jpg");
+    background-image: url("{{asset('images/cashondelivery.jpg')}}");
 }
 
 .qrscan{
-    background-image: url("images/qrcode.png");
+    background-image: url("{{asset('images/qrcode.png')}}");
 }
 
 
@@ -186,7 +186,7 @@
 
                                 <label  style="margin:20px">
                                     <div style="">
-                                       <b> <p style="font-size:20px;"> Scan ta below ur code and upload your screen shorts here , Or you can pay on delivery fir that click to the cash on delivery  thank you! </p>
+                                       <b> <p style="font-size:20px;"> Scan the QR code below and upload a screenshot here. Alternatively, you can choose to pay on delivery by clicking on the cash on delivery option. Thank you! </p>
                                        </b>
                                     </div>
                                     <form action="{{route('checkout.qrscan')}}" method="post" enctype='multipart/form-data'>
@@ -216,7 +216,7 @@
 
                                  <label class="btn paymentMethod">
                                     <a href="{{route('checkout.cashondelivery')}}">
-                                     <div class="method" style='background-image: url("images/cashondelivery.jpg");'></div>
+                                     <div class="method" style='background-image: url("{{asset('images/cashondelivery.jpg')}}")'></div>
                                      <input type="radio" name="options">
                                     </a>
                                  </label>

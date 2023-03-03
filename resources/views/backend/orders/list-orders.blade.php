@@ -42,7 +42,7 @@
 	                				<th>Orderd On</th>
 	                				<th>Customer Name</th>
 	                				<th>Customer Email</th>
-	                				<th>delevery status</th>
+	                				<th>delivery status</th>
 	                				<th>Total Price</th>
 	                				<th>Action</th>
 	                			</tr>
@@ -59,16 +59,16 @@
                                     <td>{{ $order->receiver_name }}</td>
                                     <td>{{ $order->email }}</td>
 	                				<td id="orderStatus{{ $order->id }}">
-                                        
+
 										@if($order->delivery_status == 0)
 										Pending <span style="color:red;">*</span>
 										@else
-										Delevered
+										Delivered
 										@endif
-                                       
+
                                     </td>
                                     <td>Nrs.{{ $order->total_price }}</td>
-                                    
+
                                 	<td class="text-left">
                                 		<div class="btn-group">
                                 			<button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,11 +77,11 @@
                                 			<ul class="dropdown-menu">
 											<li><a href="{{route('view.order' , $order->id)}}">View</a></li>
 												<li> <a href="{{route('editorder' , $order->id)}}"> Mark as delivery </a> </li>
-                                				
+
                                 			</ul>
                                 		</div>
                                     </td>
-                                
+
 	                			</tr>
 	                			@endforeach
 	                		</tbody>
@@ -137,7 +137,7 @@
 		                id: order_id,
 		                status: status
 		            },
-		        beforeSend: function(){                
+		        beforeSend: function(){
 
 		        },
 		        success : function(response)
@@ -146,8 +146,8 @@
 		            var obj = jQuery.parseJSON( response);
 
 		            if (obj.status == 'success') {
-		                
-		                
+
+
 		                $('#orderStatus'+order_id).load(document.URL + ' #orderStatus'+order_id+'>*');
 		                if (status == 0) {
 		                	toastr['warning']('Order Status changed to Pending!');
@@ -158,12 +158,12 @@
 		                }else if (status == 3) {
 		                	toastr['error']('Order is Cancelled!');
 		                }
-		                
+
 
 		            }else {
 
 		                toastr['error']('Something went wrong!');
-		                
+
 
 		            };
 		        }

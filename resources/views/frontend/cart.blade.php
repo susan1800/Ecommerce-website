@@ -36,6 +36,11 @@ border-bottom-left-radius: 16px;
 border-bottom-right-radius: 16px;
 }
 }
+.error{
+    color:red;
+    font-size: 12px;
+    margin:0px;padding:0px;
+}
     </style>
 
 <div class="main-sec inner-page">
@@ -57,11 +62,27 @@ border-bottom-right-radius: 16px;
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12">
+                <div class="col-lg-8" style="text-align: left">
+                    @error('name')
+                        <p class="error">{{ $message }}</p>
+                    @enderror
+                    @error('email')
+                        <p class="error">{{ $message }}</p>
+                    @enderror
+                    @error('phone')
+                        <p class="error">{{ $message }}</p>
+                    @enderror
+                    @error('address')
+                        <p class="error">{{ $message }}</p>
+                    @enderror
+                    </div>
               <div class="card card-registration card-registration-2" style="border-radius: 15px;">
                 <div class="card-body p-0">
                   <div class="row g-0">
                     <div class="col-lg-8">
                       <div class="p-5">
+
+
                         <div class="d-flex justify-content-between align-items-center mb-5">
                           <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
                           @php $total = 0 ; @endphp
@@ -201,20 +222,20 @@ border-bottom-right-radius: 16px;
             <form action="{{route('checkout')}}" method="post">
                 @csrf
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                <label for="recipient-name" class="col-form-label " style="float:left">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" value="{{old('name')}}">
               </div>
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Email:</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Your Email">
+                <label for="recipient-name" class="col-form-label" style="float:left">Email:</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Your Email" value="{{old('email')}}">
               </div>
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Mobile Number:</label>
-                <input type="text" class="form-control" id="phone" name="phone" placeholder="Your Mobile number">
+                <label for="recipient-name" class="col-form-label" style="float:left">Mobile Number:</label>
+                <input type="number" class="form-control" id="phone" name="phone" placeholder="Your Mobile number" value="{{old('phone')}}">
               </div>
               <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Delevery Address:</label>
-                <input type="text" class="form-control" id="address" name="address" placeholder="delevery address">
+                <label for="recipient-name" class="col-form-label" style="float:left">Delivery Address:</label>
+                <input type="text" class="form-control" id="address" name="address" placeholder="Eg:(lalitpur-14 nakhiport micro station)" value="{{old('address')}}">
               </div>
 
 

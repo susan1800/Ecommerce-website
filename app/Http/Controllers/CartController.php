@@ -64,7 +64,7 @@ class CartController extends Controller
 
         session()->put('kaichocart', $cart);
 
-       return redirect()->back();
+       return redirect()->back()->with('success','Item successfully added to cart!');
     }
 
     /**

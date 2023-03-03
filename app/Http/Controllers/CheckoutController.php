@@ -16,10 +16,18 @@ class CheckoutController extends Controller
     public function saveorderdata(Request $request){
         $this->validate($request,[
             'name'=>'required',
-            'email'=>'required',
+            'email'=>'required|email',
             'phone'=>'required|digits:10',
             'address'=>'required',
-         ]);
+         ], [
+            'name.required' => 'Please fill the name before checkout !',
+            'email.required'=>'Please fill the email before checkout !',
+            'email.email'=>'Please fill the valid email address !',
+            'phone.required' => 'Please fill the mobile number before checkout !',
+            'phone.digits' => 'Phone number must contain 10 digits !',
+            'address.required'=>'Please fill the delivery address before checkout !',
+
+        ]);
 
 
          session()->put('kaichocartname', $request->name);
@@ -84,12 +92,11 @@ class CheckoutController extends Controller
         session()->forget('kaichocartemail');
         session()->forget('kaichocartphone');
         session()->forget('kaichocartaddress');
-        session()->put('uaquesorderid', $order->id);
-
-        // send mail
+        session()->put('kaichoorderid', $order->id);
 
 
-                return view('frontend.completeorder');
+
+        return redirect()->route('submit.complete');
                 // dd('success');
 
 
@@ -176,7 +183,6 @@ class CheckoutController extends Controller
         session()->forget('kaichocartaddress');
         session()->put('uaquesorderid', $order->id);
 
-        // send mail
 
         // return view('frontend.completeorder');
                 return redirect()->route('submit.complete');
@@ -189,9 +195,11 @@ class CheckoutController extends Controller
     }
 
     public function completeorder(){
+
         $order_id = session()->get('uaquesorderid');
 
         $order = Order::find($order_id);
+
         return view('frontend.completeorder' , compact('order'));
     }
 }

@@ -6,7 +6,7 @@
                 <div class="top-w3pvt d-flex">
                     <div id="logo">
 
-                        <h1> <a href="index.html"><img src="{{asset('images/kaichologo.png')}}" style="width: 100px; height:100px; border-radius:50%"></a></h1>
+                        <h1> <a href="{{route('index')}}"><img src="{{asset('images/kaichologo.png')}}" style="width: 100px; height:100px; border-radius:50%"></a></h1>
                     </div>
 
                     <div class="forms ml-auto">

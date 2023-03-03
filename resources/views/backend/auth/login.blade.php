@@ -15,7 +15,7 @@
 </section>
 <section class="login-content">
     <div class="logo">
-        <h1><i>{{ config('app.name') }}</i></h1>
+
 
 
     </div>

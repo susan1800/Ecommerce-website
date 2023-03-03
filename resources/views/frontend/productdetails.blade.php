@@ -4,8 +4,12 @@
     <header class="py-sm-3 pt-3 pb-2" id="home">
 @include('frontend.partials.heaader')
 </div>
-
-
+<br>
+<div  style="padding:auto; margin:auto;">
+<div class=" col-md-6" style="padding:auto; margin:auto;">
+@include('backend.partials.flash')
+</div>
+</div>
 <form action="{{route('addtocart')}}" method="post">
     @csrf
     <section class="banner-bottom py-5">
