@@ -82,7 +82,7 @@ border-bottom-right-radius: .3rem;
                         <div class="form-group">
                             <label class="form-label" for="form2Example11" style="float:left">Name</label>
                           <input type="text" id="name" name="name" class="form-control"
-                            placeholder="Your Name" style="@error('name') border:1px solid; border-color:red @enderror"/>
+                            placeholder="Your Name" style="@error('name') border:1px solid; border-color:red @enderror" value="{{old('name')}}"/>
                             @error('name')
                             <p class="error">{{ $message }}</p>
                         @enderror
@@ -90,14 +90,14 @@ border-bottom-right-radius: .3rem;
 
                         <div class="form-group">
                             <label class="form-label" for="form2Example22" style="float:left">Email</label>
-                          <input type="email" id="email" name="email" placeholder="Your Email" class="form-control" style="@error('email') border:1px solid; border-color:red @enderror"/>
+                          <input type="email" id="email" name="email" placeholder="Your Email" class="form-control" style="@error('email') border:1px solid; border-color:red @enderror" value="{{old('email')}}"/>
                           @error('email')
                           <p class="error">{{ $message }}</p>
                       @enderror
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="form2Example22" style="float:left">Phone Number</label>
-                          <input type="number" id="phone" name="phone" placeholder="Your Number" class="form-control" style="@error('phone') border:1px solid; border-color:red @enderror" />
+                          <input type="number" id="phone" name="phone" placeholder="Your Number" class="form-control" style="@error('phone') border:1px solid; border-color:red @enderror" value="{{old('phone')}}"/>
                           @error('phone')
                           <p class="error">{{ $message }}</p>
                       @enderror
