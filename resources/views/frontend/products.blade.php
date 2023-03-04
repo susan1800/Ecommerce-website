@@ -55,7 +55,7 @@
          <div class="product-shoe-info shoe">
              <a href="{{route('shop.details',$product->product->id)}}">
              <div class="men-thumb-item">
-                 <img src="{{ asset('storage/products/'.$product->product->slug.'/thumbs/thumb_'.$product->image) }}" class="img-fluid" alt="">
+                 <img src="{{ asset('storage/products/'.$product->product->slug.'/thumbs/thumb_'.$product->product->image) }}" class="img-fluid" alt="">
 
              </div>
              </a>
@@ -67,7 +67,7 @@
 
                  <div class="product_price">
                      <div class="grid-price">
-                         <span class="money"><span class="line">${{$product->price}}</span> ${{$product->price - $product->discounted_price}}</span>
+                         <span class="money"><span class="line">${{$product->product->price}}</span> ${{$product->product->price - $product->product->discounted_price}}</span>
                      </div>
                      <br>
                      <a href="{{route('shop.details',$product->product->id)}}">
@@ -120,25 +120,25 @@
 
                 <div class="col-lg-3 shop-info-grid text-center mt-4">
                     <div class="product-shoe-info shoe">
-                        <a href="{{route('shop.details',$product->id)}}">
+                        <a href="{{route('shop.details',$product->product->id)}}">
                         <div class="men-thumb-item">
-                            <img src="{{ asset('storage/products/'.$product->slug.'/thumbs/thumb_'.$product->image) }}" class="img-fluid" alt="">
+                            <img src="{{ asset('storage/products/'.$product->product->slug.'/thumbs/thumb_'.$product->product->image) }}" class="img-fluid" alt="">
 
                         </div>
                         </a>
-                        <a href="{{route('shop.details',$product->id)}}">
+                        <a href="{{route('shop.details',$product->product->id)}}">
                         <div class="item-info-product">
                             <h4>
-                                <a href="{{route('shop.details',$product->id)}}">{{$product->title}} </a>
+                                <a href="{{route('shop.details',$product->product->id)}}">{{$product->product->title}} </a>
                             </h4>
 
                             <div class="product_price">
                                 <div class="grid-price">
-                                    <span class="money"><span class="line">${{$product->price}}</span> ${{$product->price - $product->discounted_price}}</span>
+                                    <span class="money"><span class="line">${{$product->product->price}}</span> ${{$product->product->price - $product->product->discounted_price}}</span>
                                 </div>
                                 <br>
-                                <a href="{{route('shop.details',$product->id)}}">
-                                <p class=" btn-success" style="border-radius:10px; padding-buttom:0px; padding-top:0px; padding-left:5px; padding:right:5px;">Saved  &nbsp;  &nbsp; $ {{$product->discounted_price }}</p>
+                                <a href="{{route('shop.details',$product->product->id)}}">
+                                <p class=" btn-success" style="border-radius:10px; padding-buttom:0px; padding-top:0px; padding-left:5px; padding:right:5px;">Saved  &nbsp;  &nbsp; $ {{$product->product->discounted_price }}</p>
                                 </a>
 
                             </div>

@@ -83,13 +83,14 @@
                 @endphp
         @foreach ($products as $product)
         @if($product->product)
+
         @if(($product->product->display == 1) && ($product->category_id == $category->category_id))
 
         <div class="col-lg-3 shop-info-grid text-center mt-4">
             <div class="product-shoe-info shoe">
                 <a href="{{route('shop.details',$product->product->id)}}">
                 <div class="men-thumb-item">
-                    <img src="{{ asset('storage/products/'.$product->product->slug.'/thumbs/thumb_'.$product->image) }}" class="img-fluid" alt="">
+                    <img src="{{ asset('storage/products/'.$product->product->slug.'/thumbs/thumb_'.$product->product->image) }}" class="img-fluid" alt="">
 
                 </div>
                 </a>
@@ -101,7 +102,7 @@
 
                     <div class="product_price">
                         <div class="grid-price">
-                            <span class="money"><span class="line">${{$product->price}}</span> ${{$product->price - $product->discounted_price}}</span>
+                            <span class="money"><span class="line">${{$product->product->price}}</span> ${{$product->product->price - $product->product->discounted_price}}</span>
                         </div>
                         <br>
                         <a href="{{route('shop.details',$product->product->id)}}">
