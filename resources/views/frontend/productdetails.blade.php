@@ -42,7 +42,7 @@
                             <div class="clearfix"></div>
                         </div>
                         <br>
-                        <h5>$ {{$product->price - $product->discounted_price}} &nbsp;  &nbsp;  &nbsp; <span> $ {{$product->price}}  </span></h5>
+                        <h5>Rs {{$product->price - $product->discounted_price}} &nbsp;  &nbsp;  &nbsp; <span> Rs {{$product->price}}  </span></h5>
                         <div class="available mt-3">
                             <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
 

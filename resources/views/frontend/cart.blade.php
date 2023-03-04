@@ -147,9 +147,9 @@ border-bottom-right-radius: 16px;
                             @php
                                 $price = $product->price - $product->discounted_price
                             @endphp
-                            <h6 class="mb-0">$ {{$price}} * {{$cart['quantity']}} =
+                            <h6 class="mb-0">Rs {{$price}} * {{$cart['quantity']}} =
                             </h6>
-                            <h6 class="mb-0">$ {{$price * $cart['quantity']}}
+                            <h6 class="mb-0">Rs {{$price * $cart['quantity']}}
                                 </h6>
                           </div>
                           <div class="col-md-1 col-lg-1 col-xl-1 text-end">
@@ -185,11 +185,11 @@ border-bottom-right-radius: 16px;
 
                         <div class="d-flex justify-content-between mb-5">
                           <h5 class="text-uppercase">Sub Total</h5>
-                          <h5>$ {{$total}}</h5>
+                          <h5>Rs {{$total}}</h5>
                         </div>
                         <div class="d-flex justify-content-between mb-5">
                             <h5 class="text-uppercase">Total Price</h5>
-                            <h5>$ {{$total}}</h5>
+                            <h5>Rs {{$total}}</h5>
                           </div>
 
                         <button type="button" class="btn btn-dark btn-block btn-lg"

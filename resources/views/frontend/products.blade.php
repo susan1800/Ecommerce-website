@@ -67,11 +67,11 @@
 
                  <div class="product_price">
                      <div class="grid-price">
-                         <span class="money"><span class="line">${{$product->product->price}}</span> ${{$product->product->price - $product->product->discounted_price}}</span>
+                         <span class="money"><span class="line">Rs{{$product->product->price}}</span> Rs{{$product->product->price - $product->product->discounted_price}}</span>
                      </div>
                      <br>
                      <a href="{{route('shop.details',$product->product->id)}}">
-                     <p class=" btn-success" style="border-radius:10px; padding-buttom:0px; padding-top:0px; padding-left:5px; padding:right:5px;">Saved  &nbsp;  &nbsp; $ {{$product->product->discounted_price }}</p>
+                     <p class=" btn-success" style="border-radius:10px; padding-buttom:0px; padding-top:0px; padding-left:5px; padding:right:5px;">Saved  &nbsp;  &nbsp; Rs {{$product->product->discounted_price }}</p>
                      </a>
 
                  </div>
@@ -134,11 +134,11 @@
 
                             <div class="product_price">
                                 <div class="grid-price">
-                                    <span class="money"><span class="line">${{$product->product->price}}</span> ${{$product->product->price - $product->product->discounted_price}}</span>
+                                    <span class="money"><span class="line">Rs{{$product->product->price}}</span> Rs{{$product->product->price - $product->product->discounted_price}}</span>
                                 </div>
                                 <br>
                                 <a href="{{route('shop.details',$product->product->id)}}">
-                                <p class=" btn-success" style="border-radius:10px; padding-buttom:0px; padding-top:0px; padding-left:5px; padding:right:5px;">Saved  &nbsp;  &nbsp; $ {{$product->product->discounted_price }}</p>
+                                <p class=" btn-success" style="border-radius:10px; padding-buttom:0px; padding-top:0px; padding-left:5px; padding:right:5px;">Saved  &nbsp;  &nbsp; Rs {{$product->product->discounted_price }}</p>
                                 </a>
 
                             </div>

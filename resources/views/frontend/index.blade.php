@@ -22,7 +22,7 @@
 
                 <div class="col-lg-7 banner-img">
 
-                    <video autoplay muted loop id="myVideo" class="col-lg-12">
+                    <video autoplay muted loop id="myVideo" class="col-lg-12" style="opacity: 0.5;">
                         <source src="{{asset('video/video.mp4')}}" type="video/mp4">
                         Your browser does not support HTML5 video.
                         </video>
@@ -102,11 +102,11 @@
 
                     <div class="product_price">
                         <div class="grid-price">
-                            <span class="money"><span class="line">${{$product->product->price}}</span> ${{$product->product->price - $product->product->discounted_price}}</span>
+                            <span class="money"><span class="line">Rs{{$product->product->price}}</span> Rs{{$product->product->price - $product->product->discounted_price}}</span>
                         </div>
                         <br>
                         <a href="{{route('shop.details',$product->product->id)}}">
-                        <p class=" btn-success" style="border-radius:10px; padding-buttom:0px; padding-top:0px; padding-left:5px; padding:right:5px;">Saved  &nbsp;  &nbsp; $ {{$product->product->discounted_price }}</p>
+                        <p class=" btn-success" style="border-radius:10px; padding-buttom:0px; padding-top:0px; padding-left:5px; padding:right:5px;">Saved  &nbsp;  &nbsp; Rs {{$product->product->discounted_price }}</p>
                         </a>
 
                     </div>
