@@ -25,7 +25,7 @@ class StoreProductRequest extends FormRequest
     {
         return [
             "title" => 'required|max:255',
-           
+           "tags"   => 'required',
             "price" => 'required|gte:0',
             "image" => 'required',
             "sku" => 'required'
