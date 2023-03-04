@@ -117,7 +117,7 @@
 @if($show=="bycategory")
                 @foreach ($products as $product)
 
-
+    @if($product)
                 <div class="col-lg-3 shop-info-grid text-center mt-4">
                     <div class="product-shoe-info shoe">
                         <a href="{{route('shop.details',$product->product->id)}}">
@@ -147,6 +147,7 @@
                         </a>
                     </div>
                 </div>
+                @endif
 
                 @endforeach
 
