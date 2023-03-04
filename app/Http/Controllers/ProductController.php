@@ -11,11 +11,13 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
-        $products = Product::latest()->where('display',1)->get();
-        $categories = Category::where('display',1)->get();
-        $settings = SiteSetting::first();
-        $show = "";
-        return view('frontend.products', compact('products','categories','show'));
+
+        $product_categories = CategoryProduct::groupBy('category_id')->distinct('product_id')->with('product')->latest()->get();
+
+        $products = CategoryProduct::distinct('product_id')->with('product')->latest()->get();
+
+        $show = "allproduct";
+        return view('frontend.products', compact('products','product_categories','show'));
     }
 
 
@@ -30,8 +32,10 @@ class ProductController extends Controller
 
     public function shopByCategory($id){
         $products = CategoryProduct::where('category_id' , $id)->with('product')->get();
+        $category = Category::find($id);
+        $category = $category->title;
         $show = "bycategory";
-        $categories = Category::where('display',1)->get();
-        return view('frontend.products' , compact('products' , 'categories','show'));
+
+        return view('frontend.products' , compact('products' , 'category','show'));
     }
 }
