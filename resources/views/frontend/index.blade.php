@@ -82,6 +82,7 @@
                     $i=0;
                 @endphp
         @foreach ($products as $product)
+        @if($product->product)
         @if(($product->product->display == 1) && ($product->category_id == $category->category_id))
 
         <div class="col-lg-3 shop-info-grid text-center mt-4">
@@ -123,7 +124,7 @@
 
 
       @endif
-
+    @endif
         @endforeach
 
 
